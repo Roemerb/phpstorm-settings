@@ -1,0 +1,27 @@
+<templateSet group="PHP">
+  <template name="predump" value="echo &quot;&lt;pre&gt;&quot;;&#10;var_dump();&#10;echo &quot;&lt;/pre&gt;&quot;;" description="Echoes opening and closing &lt;pre&gt; tags and a var_dump statement." toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="preupdate" value="Configuration::updateValue($prefix .'$CONFIG_KEY$', Tools::getValue($prefix . '$CONFIG_KEY$'));" description="PrestaShop Configuration Update" toReformat="false" toShortenFQNames="true">
+    <variable name="CONFIG_KEY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="preget" value="$prefix . '$CONFIG_KEY$' =&gt; Tools::getValue($prefix . '$CONFIG_KEY$', Configuration::get($prefix . '$CONFIG_KEY$'))," description="PrestaShop Configuration Get" toReformat="false" toShortenFQNames="true">
+    <variable name="CONFIG_KEY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="typefield" value="'$NAME$' =&gt; [&#10;    'type' =&gt; $TYPE$,&#10;    'description' =&gt; '$DESCRIPTION$'&#10;]," description="GraphQL type field" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>

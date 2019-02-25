@@ -1,0 +1,10 @@
+<templateSet group="Laravel">
+  <template name="migrationrelation" value="Schema::table('$TABLENAME$', function( Blueprint $table ) {&#10;    $table-&gt;foreign('$COLUMNNAME$')-&gt;references('id')-&gt;on('$REMOTECOLUMN$');&#10;});" description="Shortcut to add relations in a migration file" toReformat="false" toShortenFQNames="true">
+    <variable name="TABLENAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="COLUMNNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="REMOTECOLUMN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>
